@@ -28,7 +28,7 @@ Please see the Attached `gif` for the Design
   * Product Name, 
   * Description 
   * Price of the Product
-  * Quantity (Should be hidden in UI)
+  * In Stock (Should be hidden in UI)
 * On Each Product it should have "Add to Cart" button
 * When i click the "Add to Cart" button it should
   * Add to Cart List
