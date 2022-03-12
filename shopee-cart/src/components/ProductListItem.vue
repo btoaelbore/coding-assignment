@@ -1,8 +1,8 @@
 <template>
   <div class="product-list-item">
     <div class="product-label">
-      <span class="product-name">{{ showItemNum }} &nbsp;</span> - 
-      <span>&nbsp; {{ actionLabel }}</span>
+      <span class="product-name">{{ product.name }} &nbsp;</span> - 
+      <span>&nbsp; {{ formattedPrice }}</span>
       <span v-if="showItemNum">&nbsp; (0)</span>
     </div>
     <button>{{ actionLabel }}</button>
@@ -20,6 +20,14 @@ export default {
     actionLabel: {
       type: String,
       default: '',
+    },
+    product: {
+      type: Object,
+    }
+  },
+  computed: {
+    formattedPrice () {
+      return this.product.price.toFixed(2);
     }
   }
 }
@@ -33,7 +41,8 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px;
+    padding: 15px 20px;
+    margin-top: 15px;
 }
 
 .product-label {

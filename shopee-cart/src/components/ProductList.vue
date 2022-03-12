@@ -1,8 +1,11 @@
 <template>
   <div class="product-list">
     <ProductListItem 
+      v-for="(item, index) in products"
+      :key="index"
       :show-item-num="showItemNum"
       :action-label="actionLabel"
+      :product="item"
     />
   </div>
 </template>
@@ -18,11 +21,15 @@ export default {
   props: {
     showItemNum: {
       type: Boolean,
-      default: false,
+      default: false
     },
     actionLabel: {
       type: String,
-      default: '',
+      default: ''
+    },
+    products: {
+      type: Array,
+      default: () => []
     }
   },
 }
@@ -33,7 +40,9 @@ export default {
 .product-list {
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-top: 30px;
 }
 </style>
