@@ -1,7 +1,6 @@
 <template>
   <div>
-    <ProductList 
-      :show-item-num="false"
+    <ProductList
       :action-label="'Add to Cart'"
       :products="products"
       @add-to-cart="addToCart"

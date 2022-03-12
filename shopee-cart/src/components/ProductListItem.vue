@@ -3,7 +3,7 @@
     <div class="product-label">
       <span class="product-name">{{ product.name }} &nbsp;</span> - 
       <span>&nbsp; {{ formattedPrice }}</span>
-      <span v-if="showItemNum">&nbsp; ({{ product.quantity }})</span>
+      <span v-if="isCartItem">&nbsp; ({{ product.quantity }})</span>
     </div>
     <button @click="onClick">{{ actionLabel }}</button>
   </div>
@@ -13,7 +13,7 @@
 export default {
   name: 'ProductListItem',
   props: {
-    showItemNum: {
+    isCartItem: {
       type: Boolean,
       default: false,
     },
@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     onClick () {
-      if (!this.showItemNum) {
+      if (!this.isCartItem) {
         this.$emit('addToCart', this.product);
       } else {
         this.$emit('removeFromCart', this.product);

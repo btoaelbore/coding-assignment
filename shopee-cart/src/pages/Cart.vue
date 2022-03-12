@@ -1,7 +1,7 @@
 <template>
   <div v-if="totalQuantity > 0">
     <ProductList 
-      :show-item-num="true"
+      :is-cart-item="true"
       :action-label="'Remove from Cart'"
       :products="cartItems"
       @remove-from-cart="removeFromCart"

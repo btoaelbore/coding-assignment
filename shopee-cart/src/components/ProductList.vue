@@ -3,7 +3,7 @@
     <ProductListItem 
       v-for="(item, index) in products"
       :key="index"
-      :show-item-num="showItemNum"
+      :is-cart-item="isCartItem"
       :action-label="actionLabel"
       :product="item"
       @add-to-cart="$emit('addToCart', item)"
@@ -21,7 +21,7 @@ export default {
     ProductListItem,
   },
   props: {
-    showItemNum: {
+    isCartItem: {
       type: Boolean,
       default: false
     },
