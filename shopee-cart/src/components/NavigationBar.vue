@@ -1,7 +1,7 @@
 <template>
   <div class="navigation-bar">
     <router-link to="/">Products</router-link>
-    <router-link to="/cart">Cart ({{ totalItem }})</router-link>
+    <router-link to="/cart">Cart ({{ totalQuantity }})</router-link>
   </div>
   <router-view />
 </template>
@@ -11,7 +11,7 @@ import { mapGetters } from 'vuex';
 export default {
   name: 'NavigationBar',
   computed: {
-    ...mapGetters('cart', ['totalItem']),
+    ...mapGetters('cart', ['totalQuantity']),
   },
 }
 </script>

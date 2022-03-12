@@ -1,7 +1,7 @@
 export default ({ 
-    items = [],
-    totalItem = 0
+    cartItems = [],
+    totalQuantity = 0
 } = {}) => ({
-    items,
-    totalItem,
+    cartItems,
+    totalQuantity,
 });

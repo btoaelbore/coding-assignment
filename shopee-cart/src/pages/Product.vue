@@ -4,6 +4,7 @@
       :show-item-num="false"
       :action-label="'Add to Cart'"
       :products="products"
+      @add-to-cart="addToCart"
     />
   </div>
 </template>
@@ -28,6 +29,11 @@ export default {
   },
   methods: {
     ...mapActions('product', ['setProducts']),
+    ...mapActions('cart', ['addItemToCart']),
+
+    addToCart (item) {
+      this.addItemToCart(item);
+    }
   },
   computed: {
     ...mapGetters('product', ['products']),

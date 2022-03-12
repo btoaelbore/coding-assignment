@@ -6,6 +6,8 @@
       :show-item-num="showItemNum"
       :action-label="actionLabel"
       :product="item"
+      @add-to-cart="$emit('addToCart', item)"
+      @remove-from-cart="$emit('removeFromCart', item)"
     />
   </div>
 </template>

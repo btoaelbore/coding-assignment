@@ -1,4 +1,4 @@
 export default {
-    items: state => state.items,
-    totalItem: state => state.totalItem,
+    cartItems: state => state.cartItems,
+    totalQuantity: state => state.totalQuantity,
 };
