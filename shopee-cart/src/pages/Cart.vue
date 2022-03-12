@@ -1,8 +1,8 @@
 <template>
   <div>
     <ProductList 
-      :show-item-num="false"
-      :action-label="'Add to Cart'"
+      :show-item-num="true"
+      :action-label="'Remove from Cart'"
     />
   </div>
 </template>
@@ -10,7 +10,7 @@
 <script>
 import ProductList from '../components/ProductList.vue';
 export default {
-  name: 'ProductPage',
+  name: 'Cart',
   components: {
     ProductList,
   }

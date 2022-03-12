@@ -1,15 +1,15 @@
 <template>
-  <HomePage />
+  <Home />
 </template>
 
 <script>
 // replace with router view
-import HomePage from './pages/HomePage.vue';
+import Home from './pages/Home.vue';
 
 export default {
   name: 'App',
   components: {
-    HomePage,
+    Home,
   }
 }
 </script>

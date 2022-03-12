@@ -8,7 +8,7 @@
 import NavigationBar from '../components/NavigationBar.vue';
 
 export default {
-  name: 'HomePage',
+  name: 'Home',
   components: {
     NavigationBar,
   },

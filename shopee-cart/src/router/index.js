@@ -1,17 +1,17 @@
 import { createWebHistory, createRouter } from "vue-router";
-import ProductPage from "../pages/ProductPage.vue";
-import CartPage from "../pages/CartPage.vue";
+import Product from "../pages/Product.vue";
+import Cart from "../pages/Cart.vue";
 
 const routes = [
   {
     path: "/",
     name: "Products",
-    component: ProductPage,
+    component: Product,
   },
   {
     path: "/cart",
     name: "Cart",
-    component: CartPage,
+    component: Cart,
   },
 ];
 
