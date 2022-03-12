@@ -4,6 +4,7 @@
       :show-item-num="true"
       :action-label="'Remove from Cart'"
       :products="cartItems"
+      @remove-from-cart="removeFromCart"
     />
   </div>
   <div v-else class="no-item-message">
@@ -13,7 +14,7 @@
 
 <script>
 import ProductList from '../components/ProductList.vue';
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
   name: 'Cart',
@@ -22,6 +23,13 @@ export default {
   },
   computed: {
     ...mapGetters('cart', ['cartItems', 'totalQuantity']),
+  },
+  methods: {
+    ...mapActions('cart', ['removeItemFromCart']),
+
+    removeFromCart (item) {
+      this.removeItemFromCart(item);
+    }
   }
 }
 </script>
