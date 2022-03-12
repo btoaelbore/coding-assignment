@@ -1,12 +1,19 @@
 <template>
   <div>
-  product page
+    <ProductList 
+      :show-item-num="false"
+      :action-label="'Add to Cart'"
+    />
   </div>
 </template>
 
 <script>
+import ProductList from '../components/ProductList.vue';
 export default {
   name: 'ProductPage',
+  components: {
+    ProductList,
+  }
 }
 </script>
 

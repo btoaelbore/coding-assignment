@@ -16,7 +16,7 @@ export default {
 <style scoped>
 .navigation-bar {
   background-color: #1bae7b;
-  height: 40%;
+  height: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
