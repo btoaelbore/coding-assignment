@@ -11,6 +11,8 @@
 <script>
 import ProductList from '../components/ProductList.vue';
 import { PRODUCTS } from '../Constants/Products.js';
+import { mapActions, mapGetters } from 'vuex';
+
 export default {
   name: 'Product',
   components: {
@@ -18,8 +20,17 @@ export default {
   },
   data () {
     return { 
-      products: PRODUCTS,
+      // products: PRODUCTS,
     }
+  },
+  mounted () {
+    this.setProducts(PRODUCTS);
+  },
+  methods: {
+    ...mapActions('product', ['setProducts']),
+  },
+  computed: {
+    ...mapGetters('product', ['products']),
   }
 }
 </script>
