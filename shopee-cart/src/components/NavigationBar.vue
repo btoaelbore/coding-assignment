@@ -1,14 +1,18 @@
 <template>
   <div class="navigation-bar">
     <router-link to="/">Products</router-link>
-    <router-link to="/cart">Cart ()</router-link>
+    <router-link to="/cart">Cart ({{ totalItem }})</router-link>
   </div>
   <router-view />
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
   name: 'NavigationBar',
+  computed: {
+    ...mapGetters('cart', ['totalItem']),
+  },
 }
 </script>
 

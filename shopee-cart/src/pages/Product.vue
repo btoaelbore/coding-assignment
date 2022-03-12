@@ -10,7 +10,7 @@
 
 <script>
 import ProductList from '../components/ProductList.vue';
-import { PRODUCTS } from '../Constants/Products.js';
+import { PRODUCTS } from '../mock-data/Products.js';
 import { mapActions, mapGetters } from 'vuex';
 
 export default {
