@@ -19,11 +19,6 @@ export default {
   components: {
     ProductList,
   },
-  data () {
-    return { 
-      // products: PRODUCTS,
-    }
-  },
   mounted () {
     this.setProducts(PRODUCTS);
   },
