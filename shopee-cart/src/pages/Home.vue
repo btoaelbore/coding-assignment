@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <NavigationBar />
+    <router-view />
   </div>
 </template>
 

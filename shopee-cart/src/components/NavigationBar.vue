@@ -3,7 +3,6 @@
     <router-link to="/">Products</router-link>
     <router-link to="/cart">Cart ({{ totalQuantity }})</router-link>
   </div>
-  <router-view />
 </template>
 
 <script>
