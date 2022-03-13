@@ -20,7 +20,8 @@
 * create a Pull Request to this repository
 
 ## Installation
-* `You Installation Guide Here`
+* run `yarn` to install the packages
+* run `yarn serve` to serve shopee-cart application, click on the URL showing in the command line to open the application in the browser
 
 ## Create Simple Shopping Cart 
 Please see the Attached `gif` for the Design
