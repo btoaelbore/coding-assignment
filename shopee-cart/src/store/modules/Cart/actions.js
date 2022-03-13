@@ -1,3 +1,5 @@
+import CartItem from "../../../models/cart-item.model";
+
 export default {
     addItemToCart ({ commit, state }, item) {
         let currentCartItems = [...state.cartItems];
@@ -7,8 +9,9 @@ export default {
         if (selectedItemIndex >= 0) {
             currentCartItems[selectedItemIndex].quantity = currentCartItems[selectedItemIndex].quantity + 1;
         } else {
-            item.quantity = 1;
-            currentCartItems.push(item);
+            let newCartItem = new CartItem(item);
+            newCartItem.quantity = 1;
+            currentCartItems.push(newCartItem);
         }
 
         commit('setCartItems', currentCartItems);

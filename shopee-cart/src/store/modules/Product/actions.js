@@ -1,5 +1,8 @@
+import Product from '../../../models/product.model';
+
 export default {
     setProducts ({ commit }, products) {
-        commit('setProducts', products);
+        let productList = products.map(product => new Product(product));
+        commit('setProducts', productList);
     }
 };
